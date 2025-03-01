@@ -114,9 +114,9 @@ If you get stuck on any of these steps, ChatGPT should be able to help out prett
 
 1. In GitHub Desktop, click `add existing repository from local drive`
 2. For `local path`, choose the folder you just downloaded
-3. Click `add repository`. <u>There will be an error.</u>
+3. Click `add repository`. _There will be an error._
 4. In the error message, click `create a repository`
-5. The repository name is important, you <u>must</u> set it to:
+5. The repository name is important, you _must_ set it to:
 
 ```
 <your-github-username>.github.io
