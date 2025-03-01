@@ -116,8 +116,15 @@ If you get stuck on any of these steps, ChatGPT should be able to help out prett
 2. For `local path`, choose the folder you just downloaded
 3. Click `add repository`. **There will be an error.**
 4. In the error message, click `create a repository`
-5. Give it any name, and leave all options at their defaults
-6. Create repository
+5. The repository name is important, you **must** set it to:
+
+```
+<your-github-username>.github.io
+```
+
+For example, if your github username is `good-name`, the repository name must be `good-name.github.io`.
+
+6. Leave all options at their defaults, and create repository
 7. At the top, click `Publish repository`
 8. Uncheck "keep this code private" (it must be public for GitHub Pages to work)
 9. Publish it

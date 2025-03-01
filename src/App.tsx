@@ -2,7 +2,26 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import SpeedDialNavbar from "./nav/SpeedDialNavbar";
 import HomePage from "./pages/home/HomePage";
 import PortfolioPage from "./pages/portfolio/PortfolioPage";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { CircularProgress } from "@mui/material";
+
+const forestPan = "/forest-pan.mp4";
+const spaceTimelapse = "/space-timelapse.mp4";
+const preloadVideos = async (sources: string[]) => {
+  return Promise.all(
+    sources.map(
+      (src) =>
+        new Promise((resolve, reject) => {
+          const video = document.createElement("video");
+          video.src = src;
+          video.preload = "auto";
+
+          video.oncanplaythrough = () => resolve(true);
+          video.onerror = reject;
+        })
+    )
+  );
+};
 
 const App = () => {
   const { pathname } = useLocation();
@@ -19,6 +38,22 @@ const App = () => {
       history.scrollRestoration = "manual";
     }
   }, []);
+
+  // Don't display the page until videos are fully loaded
+  const [videosLoaded, setVideosLoaded] = useState(false);
+  useEffect(() => {
+    preloadVideos([forestPan, spaceTimelapse])
+      .then(() => setVideosLoaded(true))
+      .catch((err) => console.error("Error preloading videos:", err));
+  }, []);
+
+  if (!videosLoaded) {
+    return (
+      <div className="w-screen h-screen flex items-center justify-center">
+        <CircularProgress size={80} />
+      </div>
+    );
+  }
 
   return (
     <div className="w-full h-full">
