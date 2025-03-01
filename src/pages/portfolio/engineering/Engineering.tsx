@@ -18,7 +18,7 @@ import { MOBILE_WIDTH } from "../../../const";
 const BIRD_DESIGN_DOC_URL =
   "https://docs.google.com/document/d/1bY2uUNabcpcHDA_o5yMPObdpWLupojX4gUrv_6asOCg/edit?usp=sharing";
 const BIRD_VIDEO_URL =
-  "https://www.youtube.com/embed/SKW1gxlzTO8?si=k5ODqqU-QQ-rSFHa";
+  "https://www.youtube.com/embed/SKW1gxlzTO8?si=AQ-LFQJZan_NNdGt";
 const FROG_HOUSE_VIDEO_URL =
   "https://www.youtube.com/embed/L6i_Yp8Pn6Y?si=YOv6yp0I7JSuKcNb";
 
