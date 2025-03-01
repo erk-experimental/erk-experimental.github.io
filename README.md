@@ -88,7 +88,7 @@ Let's say we're adding a new Lego page.
 npm run build
 ```
 
-Built project can be found in the `./dist/` folder. Upload the contents to your hosting solution (Github Pages, Amazon S3, etc).
+Built project can be found in the `./dist/` folder.
 
 ## Manage hosting and domain
 
@@ -96,7 +96,7 @@ If you get stuck on any of these steps, ChatGPT should be able to help out prett
 
 ### Set up Git
 
-1. Create a new GitHub account (or use an existing one)
+1. Create a new [GitHub](https://github.com/) account (or use an existing one)
 2. Download and install [GitHub Desktop](https://github.com/apps/desktop)
 
    a. Assuming you're on Mac, unzip the downloaded file and drag the `GitHub Desktop` application to the `Applications` folder
@@ -106,7 +106,7 @@ If you get stuck on any of these steps, ChatGPT should be able to help out prett
 
 ### Download the project
 
-1. In a browser, open `https://github.com/erk-experimental/rafael.git`
+1. In a browser, open [`https://github.com/erk-experimental/rafael.git`](https://github.com/erk-experimental/rafael.git)
 2. Click the green `Code` button, then `Download Zip`
 3. Unzip the file and move the folder to anywhere on your computer
 
@@ -129,8 +129,16 @@ For example, if your github username is `good-name`, the repository name must be
 8. Uncheck "keep this code private" (it must be public for GitHub Pages to work)
 9. Publish it
 
-Now if you open up (https://github.com/) and login, you should be able to see the new repository.
+Now if you open up [GitHub](https://github.com/) and login, you should be able to see the new repository.
 
 ### Hosting on GitHub Pages
 
-[TODO]: Finish this section
+1. Open your new repository on GitHub in the browser
+2. At the top of the page, open the `Actions` tab
+3. There should be a workflow called "Initial commit". If it's still in progress, wait for it to finish
+4. Once it's done, open the `Settings` tab
+5. In the left sidebar, click on `Pages`
+6. Under `Branch`, click the dropdown. There should be an option called `gh-pages`. Click that, then click `save`
+7. Wait for a bit as GitHub spins up the website. You'll know it's ready when a message appears saying "Your site is live at..." (you might have to refresh the page to see this)
+8. **IMPORTANT**: The URL it gives you should be `http://<your-github-username>.github.io/`. If you see a URL with more text appended after the `github.io/`, you likely didn't name your repository correctly. Rename the repository and make sure to follow the format detailed in the section above.
+9. All done! Congrats!
